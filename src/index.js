@@ -8,6 +8,7 @@ import Product from "./Pages/Product";
 import CreateProduct from './Pages/CreateProduct';
 import ProductDetails from "./Pages/ProductDetails";
 import ProductList from "./Pages/ProductList";
+import CryptoDetail from './CryptoDetail';
 import NotFound from './NotFound';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,8 @@ root.render(
         <Routes>
            <Route path='/' element={<Home/>}></Route>
            <Route path='/about' element={<About/>}></Route>
+           <Route path='/cryptodetail/:cryptoSymbol/:id' element={<CryptoDetail/>}></Route>
+           <Route path='/cryptodetail/:cryptoSymbol/' element={<CryptoDetail/>}></Route>
             <Route path='product'>
               <Route path ="" element={<Product/>}></Route>
               <Route path ="create" element={<CreateProduct/>}></Route>
